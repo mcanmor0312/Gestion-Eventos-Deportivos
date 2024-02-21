@@ -1,5 +1,5 @@
 # Gestion Eventos Deportivos
 
 ## Marcos Canto Moreno 1
-## N 2
-## Nombre Integrante 3
+## Sebastian Bohorquez Torre 2
+## Pablo García Mangana 3
