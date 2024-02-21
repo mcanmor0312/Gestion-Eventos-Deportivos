@@ -6,4 +6,4 @@
 
 
 ### **Descrepcion del proyecto**
-Descripcion del proyecto dada por Diego
+Descripcion del proyecto dada por Sebas
