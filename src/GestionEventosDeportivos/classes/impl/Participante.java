@@ -1,11 +1,13 @@
 package GestionEventosDeportivos.classes.impl;
 
+import GestionEventosDeportivos.classes.Utils.GestionEventosDeportivosUtils;
+
 public class Participante {
     //Declaramos las variables
-    private String dni;
-    private String nombre;
-    private String apellidos;
-    private int edad;
+    protected String dni;
+    protected String nombre;
+    protected String apellidos;
+    protected int edad;
 
     //Declaramos getter y setters
     public String getDni() {
@@ -13,7 +15,9 @@ public class Participante {
     }
 
     public void setDni(String dni) {
-        
+        if (GestionEventosDeportivosUtils.checkDniFormat(dni)){
+            this.dni=dni;
+        }
     }
 
     public String getNombre() {
@@ -37,11 +41,40 @@ public class Participante {
     }
 
     public void setEdad(int edad) {
-        this.edad = edad;
+        if (edad>0) {
+            this.edad = edad;
+        }
     }
+    //Creamos el constructor y llamamos a los setters anteriores
+    public Participante(String dni, String apellidos, String nombre, int edad){
+        setDni(dni);
+        setEdad(edad);
+        this.nombre=nombre;
+        this.apellidos=apellidos;
 
-    public Participante(String dni, String apellidos, String nombre, String edad){
 
+    }
+    //Creamos el toString
+    public String toString(){
+        String cadenaAMostrar="";
 
+        cadenaAMostrar+="Participante llamado: "+this.nombre+" "+this.apellidos+"\n";
+        cadenaAMostrar+="DNI: "+this.dni+"\n";
+        cadenaAMostrar+="Edad: "+this.edad;
+
+        return cadenaAMostrar;
+    }
+    //Creamos el equals
+    public boolean equals(Object art){
+        if (art instanceof Participante) {
+            Participante  participante= (Participante) art;
+            if (this.dni.equalsIgnoreCase(participante.dni)){
+                return true;
+            }else {
+                return false;
+            }
+        }else {
+            return false;
+        }
     }
 }
