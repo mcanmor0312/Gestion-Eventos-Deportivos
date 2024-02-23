@@ -71,10 +71,12 @@ public class Equipo {
     }
 
 
-    public int compareTo(Equipo a, Equipo b) {
-        if (a.puntos == b.puntos) {
+    public int compareTo(Equipo a) {
+        if (this.puntos == a.puntos) {
+            return 0;
+        } else if (this.puntos > a.puntos){
             return 1;
-        } else if (){
+        }else {
             return -1;
         }
     }
