@@ -11,9 +11,10 @@ public class Equipo {
 //                  Constructor
 //-----------------------------------------------------------
 
-    public Equipo(String nombre, ArrayList<Participante> jugadores) {
+    public Equipo(String nombre, ArrayList<Participante> jugadores, int puntos) {
         this.nombre = nombre;
         this.jugadores = jugadores;
+        this.puntos = puntos;
 
     }
 
@@ -35,7 +36,7 @@ public class Equipo {
     }
 
 
-    public boolean eliminarJugador(Participante j){
+    public boolean eliminarJugador(Participante j) {
         for (int i = 0; i < jugadores.size(); i++) {
             if (getJugadores().get(i).equals(j)) {
                 jugadores.remove(i);
@@ -49,9 +50,36 @@ public class Equipo {
 
     }
 
+    @Override
+    public String toString() {
+        String cadena = "";
+
+        cadena += "Nombre: " + this.nombre + ".";
+        cadena += "Goles: " + this.puntos + ".";
+
+        return cadena;
+
+    }
+
+    public boolean equiposIguales(Equipo e) {
+        if (getNombre().equals(e.nombre)) {
+
+            return true;
+        } else {
+            return false;
+        }
+    }
 
 
-//-----------------------------------------------------------
+    public int compareTo(Equipo a, Equipo b) {
+        if (a.puntos == b.puntos) {
+            return 1;
+        } else if (){
+            return -1;
+        }
+    }
+
+    //-----------------------------------------------------------
 //                  Getter & Setters
 //-----------------------------------------------------------
 
