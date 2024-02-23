@@ -7,11 +7,26 @@ import java.util.ArrayList;
 
 public abstract class EventoDeportivo implements Ganador {
 
+    //-----------------------------------------------------------
+    //                  Atributos
+    //-----------------------------------------------------------
     protected String nombre;
     protected LocalDateTime fecha;
     protected String lugar;
     protected ArrayList<Participante> participantes;
 
+    //-----------------------------------------------------------
+    //                  Constructor
+    //-----------------------------------------------------------
+    public EventoDeportivo(String nombre, LocalDateTime fecha, String lugar) {
+        this.nombre = nombre;
+        this.fecha = fecha;
+        this.lugar = lugar;
+
+    }
+    //-----------------------------------------------------------
+    //                  Getters and Setters
+    //-----------------------------------------------------------
 
     public String getNombre() {
         return nombre;
@@ -45,13 +60,11 @@ public abstract class EventoDeportivo implements Ganador {
         this.participantes = participantes;
     }
 
-    public EventoDeportivo(String nombre, LocalDateTime fecha, String lugar) {
-        this.nombre = nombre;
-        this.fecha = fecha;
-        this.lugar = lugar;
 
-    }
 
+    //-----------------------------------------------------------
+    //                  Metodos
+    //-----------------------------------------------------------
     public boolean inscribirParticipante(Participante participante) {
         for (int i =   0; i < participantes.size(); i++) {
             Participante p = participantes.get(i);
