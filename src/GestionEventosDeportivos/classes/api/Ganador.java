@@ -2,8 +2,10 @@ package GestionEventosDeportivos.classes.api;
 
 import GestionEventosDeportivos.classes.impl.Participante;
 
+import java.util.ArrayList;
+
 public interface Ganador {
 
-    Participante obtenerGanador();
+    ArrayList<Participante> obtenerGanador();
 
 }
