@@ -2,7 +2,7 @@ package GestionEventosDeportivos.classes.impl;
 
 import java.util.ArrayList;
 
-public class Equipo {
+public class Equipo implements Comparable {
     private String nombre;
     private ArrayList<Participante> jugadores;
     private int puntos = 0;
@@ -74,13 +74,20 @@ public class Equipo {
     public int compareTo(Equipo a) {
         if (this.puntos == a.puntos) {
             return 0;
-        } else if (this.puntos > a.puntos){
+        } else if (this.puntos > a.puntos) {
             return 1;
-        }else {
+        } else {
             return -1;
         }
     }
 
+    @Override
+    public int compareTo(Object o) {
+
+
+
+        return 0;
+    }
     //-----------------------------------------------------------
 //                  Getter & Setters
 //-----------------------------------------------------------
@@ -108,4 +115,6 @@ public class Equipo {
     public void setPuntos(int puntos) {
         this.puntos = puntos;
     }
+
+
 }
