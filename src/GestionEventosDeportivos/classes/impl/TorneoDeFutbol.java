@@ -3,12 +3,13 @@ package GestionEventosDeportivos.classes.impl;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 
-public class TorneoDeFutbol extends EventoDeportivo{
+public class TorneoDeFutbol extends EventoDeportivo {
 
     private ArrayList<Equipo> equipos;
-    public TorneoDeFutbol(String nombre, LocalDateTime fecha, String lugar, ArrayList<Participante> participantes,ArrayList<Equipo> equipos) {
+
+    public TorneoDeFutbol(String nombre, LocalDateTime fecha, String lugar, ArrayList<Participante> participantes, ArrayList<Equipo> equipos) {
         super(nombre, fecha, lugar, participantes);
-        this.equipos=equipos;
+        this.equipos = equipos;
     }
 
     public ArrayList<Equipo> getEquipos() {
@@ -23,15 +24,16 @@ public class TorneoDeFutbol extends EventoDeportivo{
     public ArrayList<Participante> obtenerGanador() {
         return null;
     }
-    public boolean inscribirEquipo(Equipo hombre){
-        boolean puigdemont=true;
-        for (int i =   0; i < equipos.size(); i++) {
-            if (equipos.get(i).getNombre().equalsIgnoreCase(hombre.getNombre())){
+
+    public boolean inscribirEquipo(Equipo hombre) {
+        boolean puigdemont = true;
+        for (int i = 0; i < equipos.size(); i++) {
+            if (equipos.get(i).getNombre().equalsIgnoreCase(hombre.getNombre())) {
                 System.out.println("El equipo ya está inscrito en el evento.");
-                puigdemont= false;
+                puigdemont = false;
             }
         }
-        if (puigdemont){
+        if (puigdemont) {
             equipos.add(hombre);
             System.out.println("Se ha añadido correctamente al arraylist");
 

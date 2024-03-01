@@ -7,11 +7,26 @@ import java.util.ArrayList;
 
 public abstract class EventoDeportivo implements Ganador {
 
+    //-----------------------------------------------------------
+    //                  Atributos
+    //-----------------------------------------------------------
     protected String nombre;
     protected LocalDateTime fecha;
     protected String lugar;
     protected ArrayList<Participante> participantes;
 
+    //-----------------------------------------------------------
+    //                  Constructor
+    //-----------------------------------------------------------
+    public EventoDeportivo(String nombre, LocalDateTime fecha, String lugar) {
+        this.nombre = nombre;
+        this.fecha = fecha;
+        this.lugar = lugar;
+
+    }
+    //-----------------------------------------------------------
+    //                  Getters and Setters
+    //-----------------------------------------------------------
 
     public String getNombre() {
         return nombre;
@@ -47,27 +62,30 @@ public abstract class EventoDeportivo implements Ganador {
 
     public EventoDeportivo(String nombre, LocalDateTime fecha, String lugar, ArrayList<Participante> participantes) {
         this.nombre = nombre;
-        this.participantes=participantes;
+        this.participantes = participantes;
         this.fecha = fecha;
         this.lugar = lugar;
 
-    }
 
-    public boolean inscribirParticipante(Participante participante) {
-        for (int i =   0; i < participantes.size(); i++) {
-            Participante p = participantes.get(i);
-            if (p.getNombre().equalsIgnoreCase(participante.getNombre())) {
-                System.out.println("El participante " + participante.getNombre() + " ya está inscrito en el evento.");
-                return false;
+        //-----------------------------------------------------------
+        //                  Metodos
+        //-----------------------------------------------------------
+        public boolean inscribirParticipante(Participante participante){
+            for (int i = 0; i < participantes.size(); i++) {
+                Participante p = participantes.get(i);
+                if (p.getNombre().equalsIgnoreCase(participante.getNombre())) {
+                    System.out.println("El participante " + participante.getNombre() + " ya está inscrito en el evento.");
+                    return false;
+                }
             }
+            participantes.add(participante);
+            System.out.println("El participante " + participante.getNombre() + " ha sido inscrito con éxito.");
+            return true;
         }
-        participantes.add(participante);
-        System.out.println("El participante " + participante.getNombre() + " ha sido inscrito con éxito.");
-        return true;
-    }
 
-    @Override
-    public abstract ArrayList<Participante> obtenerGanador();
+        @Override
+        public abstract ArrayList<Participante> obtenerGanador();
+    }
 }
 
 
