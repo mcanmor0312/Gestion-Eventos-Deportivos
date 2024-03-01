@@ -65,6 +65,7 @@ public abstract class EventoDeportivo implements Ganador {
         this.participantes = participantes;
         this.fecha = fecha;
         this.lugar = lugar;
+    }
 
 
         //-----------------------------------------------------------
@@ -86,7 +87,6 @@ public abstract class EventoDeportivo implements Ganador {
         @Override
         public abstract ArrayList<Participante> obtenerGanador();
     }
-}
 
 
 
