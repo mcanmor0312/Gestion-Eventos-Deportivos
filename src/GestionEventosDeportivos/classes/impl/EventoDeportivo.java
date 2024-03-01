@@ -60,27 +60,33 @@ public abstract class EventoDeportivo implements Ganador {
         this.participantes = participantes;
     }
 
-
-
-    //-----------------------------------------------------------
-    //                  Metodos
-    //-----------------------------------------------------------
-    public boolean inscribirParticipante(Participante participante) {
-        for (int i =   0; i < participantes.size(); i++) {
-            Participante p = participantes.get(i);
-            if (p.getNombre().equalsIgnoreCase(participante.getNombre())) {
-                System.out.println("El participante " + participante.getNombre() + " ya está inscrito en el evento.");
-                return false;
-            }
-        }
-        participantes.add(participante);
-        System.out.println("El participante " + participante.getNombre() + " ha sido inscrito con éxito.");
-        return true;
+    public EventoDeportivo(String nombre, LocalDateTime fecha, String lugar, ArrayList<Participante> participantes) {
+        this.nombre = nombre;
+        this.participantes = participantes;
+        this.fecha = fecha;
+        this.lugar = lugar;
     }
 
-    @Override
-    public abstract Participante obtenerGanador();
-}
+
+        //-----------------------------------------------------------
+        //                  Metodos
+        //-----------------------------------------------------------
+        public boolean inscribirParticipante(Participante participante){
+            for (int i = 0; i < participantes.size(); i++) {
+                Participante p = participantes.get(i);
+                if (p.getNombre().equalsIgnoreCase(participante.getNombre())) {
+                    System.out.println("El participante " + participante.getNombre() + " ya está inscrito en el evento.");
+                    return false;
+                }
+            }
+            participantes.add(participante);
+            System.out.println("El participante " + participante.getNombre() + " ha sido inscrito con éxito.");
+            return true;
+        }
+
+        @Override
+        public abstract ArrayList<Participante> obtenerGanador();
+    }
 
 
 
