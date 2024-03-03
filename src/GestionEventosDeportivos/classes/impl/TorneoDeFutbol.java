@@ -22,7 +22,21 @@ public class TorneoDeFutbol extends EventoDeportivo {
 
     @Override
     public ArrayList<Participante> obtenerGanador() {
-        return null;
+        ArrayList<Participante> cabezaniu = new ArrayList<>();
+        double puntos = 0;
+        for (int i = 0; i < equipos.size(); i++) {
+
+            // ¿Oye, eres un objeto de tipo ParticipanteCarrera?
+            if (equipos.get(i).getPuntos()>puntos){
+                puntos=equipos.get(i).getPuntos();
+            }
+        }
+        for (int i=0; i<equipos.size(); i++){
+            if (equipos.get(i).getPuntos()==puntos){
+                cabezaniu.add(equipos.get(i).getJugadores().get(i));
+            }
+        }
+        return cabezaniu;
     }
 
     public boolean inscribirEquipo(Equipo hombre) {

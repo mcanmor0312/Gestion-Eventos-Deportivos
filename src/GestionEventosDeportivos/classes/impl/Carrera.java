@@ -45,6 +45,6 @@ public class Carrera extends EventoDeportivo{
                 }
             }
         }
-        return null;
+        return cabezaniu;
     }
 }
