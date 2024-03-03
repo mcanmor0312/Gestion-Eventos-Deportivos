@@ -12,6 +12,21 @@ resultados.
 
 ### Clases, Herencia e Interfaces
 **Ganador**: Una interfaz básica que instancia un arraylist de tipo Participante.
-**Evento deportivo**: Es la clase abstracta y que implementa la interfaz de Ganador.
-**Carrera**: Es una clase hija y donde se encuentra un constructor e instanciación de la carrera. 
-**Participante**: Es una clase hija
+**EventoDeportivo**: Es la clase abstracta y que implementa la interfaz de Ganador.
+**Carrera**: Es una clase hija de EventoDeportivo y donde se encuentra un constructor e instanciación de la carrera. 
+**Participante**: Contiene un constructor para crear participantes.
+**Equipo**: Es una clase hija de la clase java Comparable para comparar puntos de equipos. 
+**TorneoDeFutbol**: Clase hija de EventoDeportivo proporciona un método para obtener gnador.
+**ParticipanteCarrera**: Clase hija de Participante que añade más datos al constructor.
+**GestionEventosDeportivosUtils**: Es nuestra principal donde se encuentra el main
+
+
+##Uso del Proyecto
+Para ejecutar el proyecto:
+
+1. Clonar el repositorio.
+2. Compilar con intelliJ
+3. Ejecutar.
+
+### Licencia
+Licencia Creative Commons.
