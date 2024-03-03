@@ -50,9 +50,15 @@ public class Main {
         System.out.println(" ");
 
         // Mostrar información de eventos, participantes, equipos y jugadores
-        System.out.println("Informacion de los participantes de la carrera: ");
+        System.out.println("Informacion de los participantes de la carrera : ");
+        for (int i=0; i<carrera.getParticipantes().size(); i++){
+            System.out.println(carrera.getParticipantes().get(i).toString());
+        }
         System.out.println(" ");
-        System.out.println("Información del torneo: " + torneo.toString());
+        System.out.println("Informacion de los participantes del torneo: ");
+        for (int i=0; i<torneo.getParticipantes().size(); i++){
+            System.out.println(torneo.getParticipantes().get(i).toString());
+        }
         System.out.println(" ");
         System.out.println("Información del equipo 1: " + equipo1.toString());
         System.out.println(" ");
