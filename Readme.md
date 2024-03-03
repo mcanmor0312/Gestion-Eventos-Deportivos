@@ -21,7 +21,7 @@ resultados.
 **GestionEventosDeportivosUtils**: Es nuestra principal donde se encuentra el main
 
 
-##Uso del Proyecto
+### Uso del Proyecto
 Para ejecutar el proyecto:
 
 1. Clonar el repositorio.
