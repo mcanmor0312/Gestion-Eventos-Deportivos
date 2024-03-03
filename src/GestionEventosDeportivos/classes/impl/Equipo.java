@@ -13,7 +13,7 @@ public class Equipo implements Comparable<Equipo> {
 
     public Equipo(String nombre, int puntos) {
         this.nombre = nombre;
-        this.jugadores = jugadores;
+        this.jugadores = new ArrayList<>();
         this.puntos = puntos;
 
     }

@@ -22,6 +22,7 @@ public abstract class EventoDeportivo implements Ganador {
         this.nombre = nombre;
         this.fecha = fecha;
         this.lugar = lugar;
+        this.participantes = new ArrayList<>() ;
 
     }
     //-----------------------------------------------------------
@@ -60,12 +61,6 @@ public abstract class EventoDeportivo implements Ganador {
         this.participantes = participantes;
     }
 
-    public EventoDeportivo(String nombre, LocalDateTime fecha, String lugar, ArrayList<Participante> participantes) {
-        this.nombre = nombre;
-        this.participantes = participantes;
-        this.fecha = fecha;
-        this.lugar = lugar;
-    }
 
 
         //-----------------------------------------------------------

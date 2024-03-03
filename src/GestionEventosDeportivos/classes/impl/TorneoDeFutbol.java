@@ -23,19 +23,24 @@ public class TorneoDeFutbol extends EventoDeportivo {
     @Override
     public ArrayList<Participante> obtenerGanador() {
         ArrayList<Participante> cabezaniu = new ArrayList<>();
-        double puntos = 0;
-        for (int i = 0; i < equipos.size(); i++) {
+        int puntosMaximos = 0;
+        Equipo ganador = null;
 
-            // ¿Oye, eres un objeto de tipo ParticipanteCarrera?
-            if (equipos.get(i).getPuntos()>puntos){
-                puntos=equipos.get(i).getPuntos();
+        for (int i = 0; i < equipos.size(); i++) {
+            if (equipos.get(i).getPuntos() > puntosMaximos) {
+                puntosMaximos = equipos.get(i).getPuntos();
+                ganador = equipos.get(i);
             }
         }
-        for (int i=0; i<equipos.size(); i++){
-            if (equipos.get(i).getPuntos()==puntos){
-                cabezaniu.add(equipos.get(i).getJugadores().get(i));
+
+        // Añadir todos los jugadores del equipo ganador a la lista de ganadores
+        if (ganador != null) {
+            ArrayList<Participante> jugadoresGanador = ganador.getJugadores();
+            for (int i = 0; i < jugadoresGanador.size(); i++) {
+                cabezaniu.add(jugadoresGanador.get(i));
             }
         }
+
         return cabezaniu;
     }
 
