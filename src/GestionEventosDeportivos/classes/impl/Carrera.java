@@ -29,23 +29,22 @@ public class Carrera extends EventoDeportivo{
             // ¿Oye, eres un objeto de tipo ParticipanteCarrera?
             if (participantes.get(i) instanceof ParticipanteCarrera) {
                 ParticipanteCarrera part = (ParticipanteCarrera) participantes.get(i);
+                if (part.getTiempo()<tiempo){
+                    tiempo=part.getTiempo();
+                }
 
                 // Si part tiene un tiempo menor al tiempo del ganador, entonces, el ganador es part, lo añades a la posicion 0 del arrayList
 
             }
         }
-
-
-
-        /* // Ordenar por tiempo
-        Collections.sort(corredores, new Comparator<Corredor>() {
-            @Override
-            public int compare(Corredor c1, Corredor c2) {
-                return Integer.compare(c1.getTiempo(), c2.getTiempo());
+        for (int i=0; i<participantes.size(); i++){
+            if (participantes.get(i) instanceof ParticipanteCarrera) {
+                ParticipanteCarrera part = (ParticipanteCarrera) participantes.get(i);
+                if (part.getTiempo()==tiempo){
+                    cabezaniu.add(part);
+                }
             }
-        });
-
-         */
+        }
         return null;
     }
 }
