@@ -75,7 +75,7 @@ public class Main {
         ArrayList<Equipo> equipos = torneo.getEquipos();
         Collections.sort(equipos);
         System.out.println("Equipos ordenados por puntuación:");
-        for (int i = 0; i < equipos.size(); i++) {
+        for (int i = equipos.size()-1; i >= 0; i--) {
             System.out.println(equipos.get(i).toString());
         }
     }

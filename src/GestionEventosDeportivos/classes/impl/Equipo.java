@@ -39,7 +39,7 @@ public class Equipo implements Comparable<Equipo> {
         String cadena = "";
 
         cadena += "Nombre: " + this.nombre + ".";
-        cadena += "Goles: " + this.puntos + ".";
+        cadena += " Goles: " + this.puntos + ".";
 
         return cadena;
 
