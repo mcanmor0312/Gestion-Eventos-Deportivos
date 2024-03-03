@@ -26,8 +26,8 @@ public class ParticipanteCarrera extends Participante{
 
         cadenaAMostrar+="Participante llamado: "+this.nombre+" "+this.apellidos+"\n";
         cadenaAMostrar+="DNI: "+this.dni+"\n";
-        cadenaAMostrar+="Edad: "+this.edad;
-        cadenaAMostrar+="El tiemp del participante es de "+this.tiempo;
+        cadenaAMostrar+="Edad: " +this.edad + "\n";
+        cadenaAMostrar+="El tiempo del participante es de "+this.tiempo +" segundos";
 
         return cadenaAMostrar;
     }

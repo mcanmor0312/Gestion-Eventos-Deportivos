@@ -26,8 +26,9 @@ public class TorneoDeFutbol extends EventoDeportivo {
         int puntosMaximos = 0;
         Equipo ganador = null;
 
-        // Buscar el equipo con los puntos más altos
-        for (Equipo equipo : equipos) {
+        // Buscar el equipo con los puntos más altos utilizando un bucle for tradicional
+        for (int i = 0; i < equipos.size(); i++) {
+            Equipo equipo = equipos.get(i);
             if (equipo.getPuntos() > puntosMaximos) {
                 puntosMaximos = equipo.getPuntos();
                 ganador = equipo;
@@ -46,7 +47,6 @@ public class TorneoDeFutbol extends EventoDeportivo {
         return cabezaniu;
     }
 
-
     public boolean inscribirEquipo(Equipo hombre) {
         boolean puigdemont = true;
         for (int i = 0; i < equipos.size(); i++) {
@@ -58,8 +58,22 @@ public class TorneoDeFutbol extends EventoDeportivo {
         if (puigdemont) {
             equipos.add(hombre);
             System.out.println("Se ha añadido correctamente al arraylist");
-
         }
         return puigdemont;
+    }
+
+    @Override
+    public String toString() {
+        String cadena = "";
+
+        cadena += "Nombre del torneo: " + this.nombre + ".\n";
+        cadena += "Fecha: " + this.fecha + ".\n";
+        cadena += "Lugar: " + this.lugar + ".\n";
+        cadena += "Equipos participantes:\n";
+        for (int i = 0; i < equipos.size(); i++) {
+            cadena += equipos.get(i).toString() + "\n";
+        }
+
+        return cadena;
     }
 }

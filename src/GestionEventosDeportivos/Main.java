@@ -55,10 +55,7 @@ public class Main {
             System.out.println(carrera.getParticipantes().get(i).toString());
         }
         System.out.println(" ");
-        System.out.println("Informacion de los participantes del torneo: ");
-        for (int i=0; i<torneo.getParticipantes().size(); i++){
-            System.out.println(torneo.getParticipantes().get(i).toString());
-        }
+        System.out.println("Informacion del torneo: " + torneo.toString());
         System.out.println(" ");
         System.out.println("Información del equipo 1: " + equipo1.toString());
         System.out.println(" ");
