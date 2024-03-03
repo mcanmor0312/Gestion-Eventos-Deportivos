@@ -54,14 +54,6 @@ public class Main {
         System.out.println("Información del participante: " + torneo.toString());
         System.out.println("Información del equipo: " + equipo1.toString());
         System.out.println("Información del equipo: " + equipo2.toString());
-        System.out.println("Informacion de los participantes de la carrera: ");
-        System.out.println(" ");
-        System.out.println("Información del torneo: " + torneo.toString());
-        System.out.println(" ");
-        System.out.println("Información del equipo 1: " + equipo1.toString());
-        System.out.println(" ");
-        System.out.println("Información del equipo 2: " + equipo2.toString());
-        System.out.println(" ");
 
         // Determinar y mostrar el ganador de cada evento
         System.out.println("Ganador de la carrera: " + carrera.obtenerGanador());
