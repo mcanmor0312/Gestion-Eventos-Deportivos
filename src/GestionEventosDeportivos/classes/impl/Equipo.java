@@ -11,7 +11,7 @@ public class Equipo implements Comparable<Equipo> {
 //                  Constructor
 //-----------------------------------------------------------
 
-    public Equipo(String nombre, ArrayList<Participante> jugadores, int puntos) {
+    public Equipo(String nombre, int puntos) {
         this.nombre = nombre;
         this.jugadores = jugadores;
         this.puntos = puntos;

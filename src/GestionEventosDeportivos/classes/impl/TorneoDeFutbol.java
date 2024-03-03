@@ -7,9 +7,9 @@ public class TorneoDeFutbol extends EventoDeportivo {
 
     private ArrayList<Equipo> equipos;
 
-    public TorneoDeFutbol(String nombre, LocalDateTime fecha, String lugar, ArrayList<Participante> participantes, ArrayList<Equipo> equipos) {
-        super(nombre, fecha, lugar, participantes);
-        this.equipos = equipos;
+    public TorneoDeFutbol(String nombre, LocalDateTime fecha, String lugar) {
+        super(nombre, fecha, lugar);
+        this.equipos = new ArrayList<>();
     }
 
     public ArrayList<Equipo> getEquipos() {
