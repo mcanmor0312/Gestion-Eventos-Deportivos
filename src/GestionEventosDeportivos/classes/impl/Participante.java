@@ -2,6 +2,8 @@ package GestionEventosDeportivos.classes.impl;
 
 import GestionEventosDeportivos.classes.Utils.GestionEventosDeportivosUtils;
 
+import java.util.Objects;
+
 public class Participante {
     //Declaramos las variables
     protected String dni;
@@ -55,6 +57,7 @@ public class Participante {
 
     }
     //Creamos el toString
+    @Override
     public String toString(){
         String cadenaAMostrar="";
 
@@ -65,6 +68,7 @@ public class Participante {
         return cadenaAMostrar;
     }
     //Creamos el equals
+    @Override
     public boolean equals(Object art){
         if (art instanceof Participante) {
             Participante  participante= (Participante) art;

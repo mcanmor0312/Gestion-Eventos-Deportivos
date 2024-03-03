@@ -21,34 +21,18 @@ public class Equipo implements Comparable<Equipo> {
     //-----------------------------------------------------------
 //                      Métodos
 //-----------------------------------------------------------
-    public boolean anadirJugador(Participante j) {
-        for (int i = 0; i < jugadores.size(); i++) {
-            if (getJugadores().get(i) != null) {
-                jugadores.add(j);
-                return true;
-
-            } else {
-                return false;
-            }
+    public boolean anadirJugador(Participante jugador) {
+        if (!jugadores.contains(jugador)) {
+            jugadores.add(jugador);
+            return true;
         }
         return false;
-
     }
 
-
-    public boolean eliminarJugador(Participante j) {
-        for (int i = 0; i < jugadores.size(); i++) {
-            if (getJugadores().get(i).equals(j)) {
-                jugadores.remove(i);
-                return true;
-
-            } else {
-                return false;
-            }
-        }
-        return false;
-
+    public boolean eliminarJugador(Participante jugador) {
+        return jugadores.remove(jugador);
     }
+
 
     @Override
     public String toString() {

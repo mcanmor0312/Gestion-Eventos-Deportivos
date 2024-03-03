@@ -19,30 +19,36 @@ public class Main {
         carrera.inscribirParticipante(participante2);
 
         // Inscribir equipos en torneos de fútbol
-        Equipo equipo1 = new Equipo("Equipo Rojo",4);
-        Equipo equipo2 = new Equipo("Equipo Azul",4);
+        Equipo equipo1 = new Equipo("Equipo Rojo", 1);
+        Equipo equipo2 = new Equipo("Equipo Azul", 4);
         torneo.inscribirEquipo(equipo1);
         torneo.inscribirEquipo(equipo2);
 
         // Añadir y eliminar jugadores de equipos
         Participante jugador1 = new Participante("12345678A", "Juan", "Pérez", 30);
         Participante jugador2 = new Participante("23456789B", "Ana", "Gómez", 25);
-        equipo1.anadirJugador(jugador1);
-        equipo2.anadirJugador(jugador2);
-
-        if (equipo1.anadirJugador(jugador2)) {
+        if (equipo1.anadirJugador(jugador1)) {
             System.out.println("Jugador añadido correctamente al equipo 1.");
         } else {
             System.out.println("No se pudo añadir el jugador al equipo 1.");
         }
-
-        if (equipo2.eliminarJugador(jugador1)) {
+        if (equipo2.anadirJugador(jugador2)) {
+            System.out.println("Jugador añadido correctamente al equipo 2.");
+        } else {
+            System.out.println("No se pudo añadir el jugador al equipo 2.");
+        }
+        if (equipo1.eliminarJugador(jugador1)) {
+            System.out.println("Jugador eliminado correctamente del equipo 1.");
+        } else {
+            System.out.println("No se pudo eliminar el jugador del equipo 1.");
+        }
+        if (equipo2.eliminarJugador(jugador2)) {
             System.out.println("Jugador eliminado correctamente del equipo 2.");
         } else {
             System.out.println("No se pudo eliminar el jugador del equipo 2.");
         }
 
-        // Mostrar información de eventoos, participantes, equipos y jugadores
+        // Mostrar información de eventos, participantes, equipos y jugadores
         System.out.println("Información de la carrera: " + carrera.toString());
         System.out.println("Información del torneo: " + torneo.toString());
         System.out.println("Información del equipo 1: " + equipo1.toString());
@@ -56,8 +62,9 @@ public class Main {
         ArrayList<Equipo> equipos = torneo.getEquipos();
         Collections.sort(equipos);
         System.out.println("Equipos ordenados por puntuación:");
-        for (Equipo equipo : equipos) {
-            System.out.println(equipo.toString());
+        for (int i = 0; i < equipos.size(); i++) {
+            System.out.println(equipos.get(i).toString());
         }
     }
 }
+

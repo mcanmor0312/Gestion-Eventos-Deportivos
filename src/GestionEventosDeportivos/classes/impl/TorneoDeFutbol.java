@@ -26,23 +26,26 @@ public class TorneoDeFutbol extends EventoDeportivo {
         int puntosMaximos = 0;
         Equipo ganador = null;
 
-        for (int i = 0; i < equipos.size(); i++) {
-            if (equipos.get(i).getPuntos() > puntosMaximos) {
-                puntosMaximos = equipos.get(i).getPuntos();
-                ganador = equipos.get(i);
+        // Buscar el equipo con los puntos más altos
+        for (Equipo equipo : equipos) {
+            if (equipo.getPuntos() > puntosMaximos) {
+                puntosMaximos = equipo.getPuntos();
+                ganador = equipo;
             }
         }
 
-        // Añadir todos los jugadores del equipo ganador a la lista de ganadores
+        // Verificar si se encontró un ganador
         if (ganador != null) {
+            // Añadir todos los jugadores del equipo ganador a la lista de ganadores
             ArrayList<Participante> jugadoresGanador = ganador.getJugadores();
-            for (int i = 0; i < jugadoresGanador.size(); i++) {
-                cabezaniu.add(jugadoresGanador.get(i));
+            if (!jugadoresGanador.isEmpty()) {
+                cabezaniu.addAll(jugadoresGanador);
             }
         }
 
         return cabezaniu;
     }
+
 
     public boolean inscribirEquipo(Equipo hombre) {
         boolean puigdemont = true;
