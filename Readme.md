@@ -18,7 +18,7 @@ resultados.
 **Equipo**: Es una clase hija de la clase java Comparable para comparar puntos de equipos. 
 **TorneoDeFutbol**: Clase hija de EventoDeportivo proporciona un método para obtener gnador.
 **ParticipanteCarrera**: Clase hija de Participante que añade más datos al constructor.
-**GestionEventosDeportivosUtils**: Es nuestra principal donde se encuentra el main
+**GestionEventosDeportivosUtils**: Es nuestra clase principal donde se encuentra el main
 
 
 ### Uso del Proyecto
