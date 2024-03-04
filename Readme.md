@@ -29,4 +29,4 @@ Para ejecutar el proyecto:
 3. Ejecutar.
 
 ### Licencia
-Licencia Creative Commons.
+Licencia Creative Commons CC0 1.0 DEED.
