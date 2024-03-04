@@ -15,6 +15,7 @@ public class ParticipanteCarrera extends Participante{
         }
     }
 
+    //Declaramos el constructor que hereda de participante y setea el tiempo si se puede
     public ParticipanteCarrera(String dni, String apellidos, String nombre, int edad, Double tiempo) {
         super(dni, apellidos, nombre, edad);
         setTiempo(tiempo);

@@ -3,6 +3,7 @@ package GestionEventosDeportivos.classes.impl;
 import java.util.ArrayList;
 
 public class Equipo implements Comparable<Equipo> {
+    //Declaramos las variables
     private String nombre;
     private ArrayList<Participante> jugadores;
     private int puntos = 0;

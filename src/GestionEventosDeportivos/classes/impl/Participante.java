@@ -56,7 +56,7 @@ public class Participante {
 
 
     }
-    //Creamos el toString
+    //Creamos el toString y damos la informacion necesaria
     @Override
     public String toString(){
         String cadenaAMostrar="";
@@ -67,7 +67,7 @@ public class Participante {
 
         return cadenaAMostrar;
     }
-    //Creamos el equals
+    //Creamos el equals y los comparamos por el dni
     @Override
     public boolean equals(Object art){
         if (art instanceof Participante) {

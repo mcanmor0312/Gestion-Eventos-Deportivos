@@ -66,6 +66,8 @@ public abstract class EventoDeportivo implements Ganador {
         //-----------------------------------------------------------
         //                  Metodos
         //-----------------------------------------------------------
+
+    //Metodo para inscribir participante si es posible
         public boolean inscribirParticipante(Participante participante){
             for (int i = 0; i < participantes.size(); i++) {
                 Participante p = participantes.get(i);
@@ -79,6 +81,7 @@ public abstract class EventoDeportivo implements Ganador {
             return true;
         }
 
+        //Metodo abstracto para obtener ganador
         @Override
         public abstract ArrayList<Participante> obtenerGanador();
     }
